@@ -7,37 +7,57 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="./style.css">
     <!-- External Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/mona-sans?styles=144357,144333,144339,144351,144321,144327,144315" rel="stylesheet">
 </head>
 <body>
-    <div class="title">
-        <h1>
-            Stopwatch
-        </h1>
-    </div>
-
     <div class="container">
+        <div class="title">
+            <h1>
+                Stopwatch
+            </h1>
+        </div>
         <div class="watch">
             <div class="outer-circle">
                 <div class="inner-circle">
-                        <span class="text minute">01 :</span>
-                        <span class="text sec">&nbsp;46 :</span>
-                        <span class="text msec">&nbsp;33</span>
+                    <div class="text-container">
+                        <span class="text minute">0.</span>
+                        <span class="text sec">0</span>
+                        <span class="text msec">.00</span>
+                    </div>
                 </div>
             </div>
             <div class="button-wrapper">
-                <button class="button">Reset</button>
-                <button class="button">Play</button>
-                <button class="button">Lap</button>
+                <button class="button reset hidden">Reset</button>
+                <button class="button play">Play</button>
+                <button class="button lap hidden">Lap</button>
             </div>
         </div>
         <ul class="laps">
             <li class="lap-item">
                 <span class="number">#1</span>
+                <span class="time-stamp"> 01: 07: 03</span>
+            </li>
+            <li class="lap-item">
+                <span class="number">#1</span>
                 <span class="time-stamp"> 01: 02: 03</span>
             </li>
+            <li class="lap-item">
+                <span class="number">#1</span>
+                <span class="time-stamp"> 01: 02: 03</span>
+            </li>
+            <li class="lap-item">
+                <span class="number">#1</span>
+                <span class="time-stamp"> 01: 02: 03</span>
+            </li>
+            <li class="lap-item">
+                <span class="number">#1</span>
+                <span class="time-stamp"> 01: 02: 03</span>
+            </li>
+            <li class="lap-item">
+                <span class="number">#1</span>
+                <span class="time-stamp"> 01: 02: 03</span>
+            </li>
+            <button class="lap-clear-button">Clear all</button>
         </ul>
     </div>
 
