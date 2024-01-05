@@ -37,13 +37,31 @@ h1{
 }
 
 .inner-circle{
-    width: 235px;
-    height: 235px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.animation-bg{
+    background: linear-gradient(-45deg, #6E67DF, #F4426D, #479CF6, #4D45FF, #FBE7AD);
+    background-size: 500% 500%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
 }
 
 .text{
