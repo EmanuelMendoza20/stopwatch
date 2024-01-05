@@ -25,7 +25,9 @@ const toggleButton = () => {
 const play = () => {
     if(!isPlay) {
         playButton.innerHTML = "Pause";
-        bg.classList.add("animation-bg");
+        setTimeout(() => {
+            bg.classList.add("animation-bg");
+        }, 10);
         min = setInterval(() => {
             minute.innerText = `${++minCounter}.`;
         }, 60*1000)
@@ -42,6 +44,22 @@ const play = () => {
             mSecond.innerText = ++mSecCounter;
         }, 10)
         isPlay = true;
+        Toastify({
+
+            text: "Started",
+            gravity: "bottom",
+            position: "center",
+            style: {
+                background: "#141414",
+                color: "#cccccc",
+                borderRadius: "8px",
+                boxShadow: "none"
+            },
+            className: "custom-toast",
+            duration: 1500
+    
+            
+            }).showToast();
     } else {
         playButton.innerHTML = "Play";
         clearInterval(min);
@@ -49,6 +67,23 @@ const play = () => {
         clearInterval(mSec);
         isPlay = false;
         bg.classList.remove("animation-bg");
+
+        Toastify({
+
+            text: "Paused",
+            gravity: "bottom",
+            position: "center",
+            style: {
+            background: "#141414",
+            color: "#cccccc",
+            borderRadius: "8px",
+            boxShadow: "none"
+            },
+            className: "custom-toast",
+            duration: 1500
+    
+            
+            }).showToast();
     }
     toggleButton();
     console.log(isPlay)
@@ -65,6 +100,23 @@ const reset = () => {
     secCounter = 0;
     mSecCounter = 0;
     minCounter = 0;
+
+    Toastify({
+
+        text: "Reset",
+        gravity: "bottom",
+        position: "center",
+        style: {
+            background: "#141414",
+            color: "#cccccc",
+            borderRadius: "8px",
+            boxShadow: "none"
+        },
+        className: "custom-toast",
+        duration: 1500
+
+        
+        }).showToast();
 
 }
 
@@ -85,12 +137,44 @@ const lap = () => {
 
     //Borrar boton clear all si no hay laps
     clearButton.classList.remove("hidden");
+
+    Toastify({
+
+        text: "Lap created",
+        gravity: "bottom",
+        position: "center",
+        style: {
+            background: "#141414",
+            color: "#cccccc",
+            borderRadius: "8px",
+            boxShadow: "none"
+        },
+        className: "custom-toast",
+        duration: 1500
+
+        
+        }).showToast();
 }
 
 const clearAll = () => {
     laps.innerHTML = "";
     clearButton.classList.add("hidden")
     lapItem = 0;
+    Toastify({
+
+        text: "Cleared",
+        gravity: "bottom",
+        position: "center",
+        style: {
+            background: "#942727",
+            color: "#cccccc",
+            borderRadius: "8px"
+        },
+        className: "custom-toast",
+        duration: 1500
+
+        
+        }).showToast();
 }
 
 playButton.addEventListener("click", play);

@@ -47,9 +47,10 @@ h1{
 }
 
 .animation-bg{
-    background: linear-gradient(-45deg, #6E67DF, #F4426D, #479CF6, #4D45FF, #FBE7AD);
-    background-size: 500% 500%;
-    animation: gradient 7s ease infinite;
+    background: linear-gradient(45deg, #6E67DF,#F4426D, #4D45FF,#ff4032, #9EFC8F);
+    background-size: 600% 600%;
+    animation: gradient 20s ease infinite;
+    opacity: 1;
 }
 
 @keyframes gradient {
@@ -124,7 +125,7 @@ h1{
     width: 100%;
     padding: 10px;
     text-align: center;
-    border: 1px solid #202020;
+    border: 1px solid #141414;
     border-radius: 50px;
     font-weight: 300;
 }
@@ -149,8 +150,17 @@ h1{
     border: 1px solid white;
     cursor: pointer;
     font-family: 'Mona-Sans', sans-serif;
-    font-weight: 500
+    font-weight: 500;
+    font-size: 15px;
+    height: 46px;
 }
 .hidden{
     visibility: hidden;
+}
+
+.custom-toast {
+    font-family: "Mona-Sans";
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 10px;
 }
